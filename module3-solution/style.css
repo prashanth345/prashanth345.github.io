@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'sniglet', cursive;
+    list-style: none;
+}
+body{
+    background: #FAFAFA;
+}
+.container{
+    width:100%;
+    height: 100vh;
+}
+nav{
+    background: #B3E5FC;
+    border:2px solid black;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+nav h1{
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+.our-menu{
+    margin-left: 660px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.our-menu h2{
+    font-size: 28px ;
+    letter-spacing: 2px;
+}
+.chicken{
+    background: #B3E5FC;
+    margin: 15px;
+    padding: 15px;
+}
+.chicken h3{
+    margin-left: 660px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+.beef{
+    background: #B3E5FC;
+    margin: 15px;
+    padding: 15px;
+}
+.beef h3{
+    margin-left: 660px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+.sushi{
+    background: #B3E5FC;
+    margin: 15px;
+    padding: 15px;
+}
+.sushi h3{
+    margin-left: 660px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+ input{
+    display: none;
+}
+label{
+    float:right;
+    margin-top: -1px;
+    display: none;
+}
+label i{
+    font-size: 30px;
+    border:1.5px solid black;
+    padding: 5px;
+}
+.drop-down{
+    background: #fafafa;
+    position: absolute;
+    top: 70px;
+    padding: 10px;
+    width: 24em;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    display: none;
+}
+
+.drop-down ul li{
+    text-align: center;
+    border:1px solid black;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+@media (min-width:375px) and (max-width:425px) {
+    nav h1{
+        font-size: 1em;
+    }
+    .our-menu{
+        margin-left: 160px;
+        z-index: -3;
+        position: relative;
+    }
+    label{
+        display: block;
+
+    }
+    label i{
+        font-size: .8em;
+        margin-bottom: 1em;
+    }
+    label i:hover{
+        color: white;
+    }
+    .drop-down{
+        display: block;
+        width: 17em;
+        margin-left: -19px;
+        margin-top: -15px;
+        position: absolute;
+        top: -100px;
+        transition: top 0.4s ease;
+        z-index: -1;
+    }
+    .chicken, .beef, .sushi{
+        margin-top: 40px;
+    }
+    .chicken h3, .beef h3, .sushi h3{
+        margin-left: 145px;
+    }
+    #check:checked ~ .drop-down {
+        top: 70px;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .our-menu{
+        margin-left: 340px;
+    }
+    .chicken h3, .beef h3, .sushi h3{
+        margin-left: 340px;
+    }
+}
