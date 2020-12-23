@@ -1,0 +1,227 @@
+*{
+  margin:0;
+  padding: o;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* header starts */
+
+.container{
+  width: 100%
+  height:100vh;
+  background-image: url(club.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+  height:100vh;
+}
+nav img{
+  width:100px;
+  float: left;
+  margin-top: -20px;
+  margin-left: -15px;
+}
+nav{
+  background-color: #D84315;
+  height: 60px;
+}
+nav .club{
+  float: left;
+  line-height: 50px;
+  margin-left: -30px;
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  margin-top: -0px;
+}
+nav .login{
+  float: right;
+  line-height: 60px;
+}
+nav .login a{
+  background-color: rgba(255,255,255,0.6);
+  margin-right: 6px;
+  padding: 6px;
+  font-size: 18px;
+  text-align: center;
+  color:white;
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
+}
+nav .login a:hover{
+  background-color: white;
+  color:#D84315;
+}
+
+/* header ends */
+/* logo animation */
+
+.club-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 5px;
+  width:100%;
+
+}
+#c1,#c2,#c3{
+  height: 20px;
+  width: 10px;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 40px;
+  margin-right: 5px;
+  border:2px solid white;
+  box-shadow: inset -3px -3px 5px #fff,
+              inset 3px 3px 5px rgba(0,0,0,.3);
+  position: relative;
+  overflow: hidden;
+}
+#c2{
+  height: 30px;
+}
+ #c1::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: #D84315;
+  left: 0;
+  top: 0;
+  border-radius: 40px;
+  animation: animate 2.5s ease-in-out infinite alternate;
+  animation-delay: 1s;
+}
+#c2::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background-color: #D84315;
+  left: 0;
+  top: 0;
+  border-radius: 40px;
+  animation: animate 2.5s ease-in-out infinite alternate;
+  animation-delay: 2s;
+}
+#c3::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: #D84315;
+  left: 0;
+  top: 0;
+  border-radius: 40px;
+  animation: animate 1.5s ease-in-out infinite alternate;
+  animation-delay: 3s;
+}
+@keyframes animate {
+  0%{
+    transform: translateY(160px);
+}
+  50%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(160px);
+  }
+}
+
+/* logo animation ends */
+
+/* body starts */
+
+.about-club{
+    color:#D84315;
+  position: relative;
+  top: 60px;
+  text-indent: -5px;
+  font-size: 18px;
+  font-weight: 550;
+}
+.text{
+  position: relative;
+  top: 80px;
+    color:#D84315;
+  font-size: 21px;
+
+}
+.text p{
+  color:#D84315;
+  font-weight: 600;
+}
+.sign-up{
+  position: relative;
+  top: 110px;
+}
+.sign-up a{
+  text-decoration: none;
+}
+.sign-up a button{
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #D84315;
+  color:white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sign-up a button:hover{
+  background-color: white;
+  color: #D84315;
+}
+
+/* body ends */
+
+/* footer starts */
+
+.footer {
+  background: #D84315;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer .footer-text {
+  width: 95%;
+}
+.footer .footer-text h5{
+  float: left;
+  color: white;
+  font-size: 18px;
+  margin-top: 9px;
+}
+.footer .footer-text .follow{
+  margin-top: 10px;
+  font-size: 15px;
+  color: white;
+}
+.footer .footer-text ul li{
+  display:inline-block;
+  margin: 9px;
+}
+.footer .footer-text ul li i{
+  color: white;
+}
+.footer .footer-text .copy{
+  color: white;
+  font-size: 13px;
+}
