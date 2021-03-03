@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+* {
+    font-family: Spartan;
+}
+
+#menu {
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: -38px;
+    left: -22px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    backdrop-filter: blur(4px);
+    height: 66px;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu ul a:hover {
+    border-bottom: 2px solid black;
+}
+
+@media (min-width:426px) {
+    #menu {
+        background-color: transparent;
+        position: absolute;
+        top: -20px;
+        left: 60px;
+        font-size: 25px;
+        backdrop-filter: unset;
+    }
+}

@@ -1,0 +1,11 @@
+* {
+    font-family: Manrope;
+}
+
+#share {
+    display: none;
+}
+
+#share i:hover {
+    transform: scale(2);
+}

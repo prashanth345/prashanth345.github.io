@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: poppins;
+}
+
+p {
+    font-family: open sans;
+}
+
+#get {
+    background-color: #ff00bd;
+}
+
+header {
+    background-image: url(/images/bg-hero-mobile.svg);
+    background-color: rgb(234, 251, 255);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+footer {
+    background-color: #00242f;
+}
+
+@media (min-width:426px) {
+    header {
+        background-image: url(/images/bg-hero-desktop.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+}
+
+#pop {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
