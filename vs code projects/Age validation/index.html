@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-r from-indigo-500 to-green-400">
+
+    <section class="flex items-center justify-center  mt-28">
+        <div class="p-2 py-8 text-center rounded-lg shadow-lg bg-gray-50 w-96">
+            <h1 class="mb-4 text-3xl font-bold text-gray-600">Age Validation</h1>
+            <p class="px-20 text-gray-500"> This Website requires your age between <span class="font-bold text-red-500">18</span> to <span class="font-bold text-red-500">30</span> years. please enter your age correctly.
+            </p>
+            <input id="input" class="p-2 mt-5" type="text" placeholder="Enter Your Age">
+            <button id="btn" class="px-4 py-2 bg-red-300 border-dotted rounded-md">Submit</button>
+        </div>
+
+
+    </section>
+
+    <script>
+        let btn = document.getElementById('btn');
+
+        btn.onclick = function() {
+
+            let input = document.getElementById('input').value;
+            if (input >= 18 && input <= 30) {
+                alert('good');
+            } else {
+                alert('bad');
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
