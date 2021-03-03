@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body class="">
+    <section class=" lg:flex-row-reverse lg:gap-4 lg:p-20     flex flex-col justify-center items-center">
+        <div id="bg-img" class=" lg:mt-4 lg:w-96 lg:h-80  mt-10 w-80 h-64  py-7 px-14">
+            <div class=" xl:w-96 xl:h-80  ">
+                <img class="xl:w-64  w-52 rounded-md shadow-2xl " src="images/image-john.jpg" alt="">
+                <img class="xl:w-64 active w-52 rounded-md shadow-2xl " src="images/image-tanya.jpg" alt="">
+                <div class=" z-40 flex relative xl:top-52 top-48 left-20">
+                    <span id="prev" class="bg-white p-2 shadow-lg cursor-pointer rounded-tl-md  rounded-bl-md">
+                        <svg class="w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                          </svg>
+                    </span>
+                    <span id="next" class="bg-white p-2 shadow-lg cursor-pointer rounded-tr-md  rounded-br-md">
+                        <svg class="w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                      </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="  h-72  w-full  relative   overflow-hidden mb-20 mt-10 p-10">
+            <div id="bg-info" class="  lg:p-20  p-3 absolute left-0 info1  text-center pt-8">
+                <h1 class=" xl:text-2xl text-gray-600 ">"If you want to lay the best foundation possible I'd recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer." </h1>
+                <div class="lg:flex mt-5">
+                    <h1 class="text-lg md:mr-4  font-bold">Tanya Sinclair</h1>
+                    <p class="text-gray-500 font-bold">UX Engineer</p>
+
+                </div>
+            </div>
+
+            <div id="bg-info" class=" lg:p-20 opacity-0 p-3  absolute left-0 info2  text-center pt-8">
+                <h1 class=" xl:text-2xl  text-gray-600 ">"I've been interested in coding for a while but never taken the jump, until now. I couldn't recommend this course enough. I'm now in the job of my dreams and so excited about the future."</h1>
+                <div class="lg:flex   mt-5">
+                    <h1 class="text-lg md:mr-4  font-bold">John Tarkpor</h1>
+                    <p class="text-gray-500 font-bold">Junior Front-end Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

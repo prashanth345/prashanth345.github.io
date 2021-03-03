@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+* {
+    font-family: Karla;
+}
+
+#div1 {
+    background-color: #00b8b5;
+}
+
+#div2 {
+    background-color: #00c3c0;
+}
+
+#h1 {
+    color: #29a6a2;
+}
+
+#p1 {
+    color: #bfeb72;
+}
+
+#p2 {
+    color: #caccd9;
+}
+
+button {
+    background-color: #abf111;
+}

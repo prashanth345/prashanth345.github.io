@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body class="flex p-10 md:px-36 md:pt-10 xl:px-56 items-center justify-center">
+    <section class="flex flex-col justify-center items-center gap-10">
+        <div>
+            <img src="images/logo.svg" alt="">
+        </div>
+        <div>
+            <h1 class="lg:text-4xl  text-3xl text-gray-500">We are launching
+                <p class="text-black font-bold text-center">soon!</p>
+            </h1>
+            <p class="text-center text-gray-600 ">Subscribe and get notified</p>
+        </div>
+
+        <div class="relative">
+            <form action="" method="GET" class=" flex flex-col md:flex-row gap-2">
+                <input id="text" class="  outline-none rounded-full p-2 border px-4" type="email" name="email" placeholder="Your email address">
+                <span id="span" class="md:absolute top-14"></span>
+                <input id="submit" class="outline-none  py-2 md:px-8 md:py-3  font-bold rounded-full text-white" type="submit" name="submit" value="Notify Me" id="">
+            </form>
+        </div>
+
+        <div>
+            <img src="images/illustration-dashboard.png" alt="sckeleton">
+        </div>
+        <div>
+            <h1 class="text-sm text-gray-400 "><i class="fa fa-copyright"></i>Copyright Ping. All rights reserved</h1>
+        </div>
+    </section>
+</body>
+
+</html>

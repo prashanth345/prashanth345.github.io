@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+* {
+    font-family: Libre Franklin;
+}
+
+input[type='submit'] {
+    background-color: hsl(223, 87%, 63%);
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: hsl(223, 100%, 88%);
+}

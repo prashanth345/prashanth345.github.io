@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+}
+
+
+/* Write your styles here */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: greenyellow;
+    border-radius: 20px;
+    width: 12rem;
+    outline: none;
+}
+
+input[type='checkbox'] {
+    width: 50px;
+    -webkit-appearance: none;
+    height: 22px;
+    border-radius: 10px;
+    border: none;
+    background-color: gray;
+    outline: none;
+    position: relative;
+}
+
+input[type='checkbox']::before {
+    position: absolute;
+    content: '';
+    left: 3px;
+    top: 1px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform .5s;
+}
+
+input[type='checkbox']:checked {
+    background-color: green;
+}
+
+input[type='checkbox']:checked::before {
+    transform: translateX(25px);
+}

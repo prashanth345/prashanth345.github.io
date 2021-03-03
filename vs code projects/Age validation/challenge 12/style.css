@@ -1,0 +1,25 @@
+* {
+    outline: none;
+}
+
+:root {
+    --tryit: #6935a6;
+    --claim: #00db8c;
+}
+
+section {
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: #ff686b;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#try {
+    background-color: var(--tryit);
+}
+
+#claim {
+    background-color: var(--claim);
+}
