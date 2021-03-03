@@ -1,0 +1,159 @@
+        * {
+            outline: none;
+        }
+        
+        body {
+            background-image: url(images/bg1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #top {
+            background-color: #ff5500;
+        }
+        
+        #bg-white {
+            background: rgba(255, 255, 255, .8);
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, .5);
+        }
+        
+        .bartoggle {
+            bottom: 0;
+        }
+        
+        #songDrop {
+            transition: bottom 0.6s;
+        }
+        
+        #rotate {
+            transition: transform .9s;
+            animation-delay: 00s;
+        }
+        
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #slide-con {
+            z-index: 100;
+        }
+        
+        @keyframes slideend {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(0deg);
+            }
+        }
+        
+        #slide {
+            animation-direction: normal;
+            animation-delay: 00s;
+        }
+        
+        @keyframes slide {
+            from {
+                transform: rotate(25deg);
+            }
+            to {
+                transform: rotate(25deg);
+            }
+        }
+        
+        #songImg {
+            /* background-image: url(images/Attention.jpg); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-attachment: fixed;
+        }
+        
+        #prev,
+        #next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, .4), 3px 3px 10px rgba(0, 0, 0, .4);
+        }
+        
+        #speedUp,
+        #speedDown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            margin-top: 2px;
+            height: 35px;
+            color: #ff5500;
+            font-size: 10px;
+            font-weight: 900;
+            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, .4), 3px 3px 10px rgba(0, 0, 0, .4);
+        }
+        
+        #playPause {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            margin-top: 10px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: inset 3px 3px 10px rgba(0, 0, 0, .4), 3px 3px 10px rgba(0, 0, 0, .4);
+        }
+        
+        #range {
+            -webkit-appearance: none;
+            background-color: rgba(0, 0, 0, .2);
+            border-radius: 20px;
+            height: 5px;
+            width: 170px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .4);
+            overflow: hidden;
+        }
+        
+        #range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid black;
+            background-color: greenyellow;
+            box-shadow: -400px 0 0 400px #ff5500;
+        }
+        
+        #volDown,
+        #volUp {
+            color: #ff5500;
+            font-size: 20px;
+        }
+        
+        #love {
+            color: rgba(0, 0, 0, .8);
+            cursor: pointer;
+        }
+        
+        #love.pa-heart {
+            color: white;
+        }
+        
+        #songDrop {
+            background-color: rgba(0, 0, 0, .1);
+            backdrop-filter: blur(6px);
+        }
+        
+        .small {
+            font-size: 10px;
+        }

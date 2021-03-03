@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="flex items-center justify-center ">
+
+    <section id="top" class="overflow-hidden relative w-64 bg-yellow-500 left-52 rounded-3xl top-20">
+        <div class="flex flex-row items-center justify-between px-5 pt-4 font-bold">
+            <span class="text-xl" id="love"><i class="fa fa-heart"></i></span>
+            <span class="text-xl text-gray-800">My Music</span>
+            <span class="text-xl text-gray-800 cursor-pointer" id="bars">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M4 6H20V8H4zM8 11H20V13H8zM13 16H20V18H13z"></path></svg>
+            </span>
+        </div>
+
+        <div id="slide-con" class="absolute right-7 top-12">
+            <img id="slide" src="images/head.png" class="w-14" alt="">
+        </div>
+
+        <section id="bg-white" class="flex flex-col  justify-center px-5 mt-20 itemes-center rounded-b-3xl">
+            <div class="flex justify-center itemes-center">
+                <div id="rotate" class="relative flex justify-center w-32 h-32 bg-yellow-500 rounded-full shadow-2xl bottom-12 itemes-center">
+                    <img id="songImg" alt="" class="relative w-32 h-32 bg-pink-500 rounded-full left-7 ">
+                    <div class="relative flex justify-center border-8 border-black rounded-full top-9 right-16 w-14 h-14 itemes-center">
+                        <div class="relative w-10 h-10 bg-white border-2 border-white rounded-full "></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center mb-5 -mt-3 itemes-center">
+                <span class="text-xl font-bold text-center text-gray-500" id="songName">Song1</span>
+                <span class="text-xl font-bold text-center text-gray-500" id="artistName">Artist Name</span>
+            </div>
+
+            <div class="flex justify-center gap-3 itemes-center">
+                <input id="range" type="range" min="0" value="0" step=".25">
+                <div id="mute" class="-mt-2 cursor-pointer" id="track"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, .5);transform:;-ms-filter:"><path d="M21.707 20.293l-2.023-2.023c1.44-1.686 2.315-3.846 2.315-6.27 0-4.091-2.472-7.453-5.999-9v2c2.387 1.386 3.999 4.047 3.999 7 0 1.832-.629 3.543-1.672 4.913l-1.285-1.285C17.644 14.536 18 13.19 18 12c0-1.771-.775-3.9-2-5v7.586l-2-2V4c0-.369-.203-.708-.528-.882-.324-.174-.72-.154-1.026.05L7.727 6.313l-4.02-4.02L2.293 3.707l18 18L21.707 20.293zM12 5.868v4.718L9.169 7.755 12 5.868zM4 17h2.697l5.748 3.832C12.612 20.943 12.806 21 13 21c.162 0 .324-.039.472-.118C13.797 20.708 14 20.369 14 20v-1.879l-2-2v2.011l-4.445-2.964c-.025-.017-.056-.02-.082-.033-.061-.033-.123-.058-.19-.078-.064-.019-.126-.032-.192-.038C7.059 15.016 7.032 15 7 15H4V9h.879L3.102 7.223C2.451 7.554 2 8.222 2 9v6C2 16.103 2.897 17 4 17z"></path></svg></div>
+            </div>
+
+
+            <!-- audio -->
+
+            <audio id="audio"></audio>
+
+
+
+            <div class="flex gap-2 m-auto mt-5 mb-3 ">
+                <button class="text-sm rounded-full" id="prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill:#ff5500;transform:;-ms-filter:"><path d="M8.121 12L13.061 7.061 10.939 4.939 3.879 12 10.939 19.061 13.061 16.939z"></path><path d="M17.939 4.939L10.879 12 17.939 19.061 20.061 16.939 15.121 12 20.061 7.061z"></path></svg></button>
+                <button class="p-2 text-sm font-bold rounded-full" id="speedDown">-30s</button>
+                <button class="flex justify-center text-6xl text-blue-500 rounded-full itemes-center" id="playPause"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" style="fill:#ff5500;transform:;-ms-filter:"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8s3.589-8,8-8 s8,3.589,8,8S16.411,20,12,20z"></path><path d="M9 17L17 12 9 7z"></path></svg></button>
+                <button class="p-2 text-sm font-bold rounded-full" id="speedUp">+30s</button>
+                <button class="text-sm rounded-full" id="next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill:#ff5500;transform:;-ms-filter:"><path d="M13.061 4.939L10.939 7.061 15.879 12 10.939 16.939 13.061 19.061 20.121 12z"></path><path d="M6.061 19.061L13.121 12 6.061 4.939 3.939 7.061 8.879 12 3.939 16.939z"></path></svg></button>
+            </div>
+            <div class="flex justify-around mb-5 itemes-center">
+                <span class="font-bold cursor-pointer" id="volDown">-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#ff5500;transform:;-ms-filter:"><path d="M4 17h2.697L14 21.868V2.132L6.697 7H4C2.897 7 2 7.897 2 9v6C2 16.103 2.897 17 4 17zM16 7v10c1.225-1.1 2-3.229 2-5S17.225 8.1 16 7z"></path></svg></span>
+                <span class="font-bold cursor-pointer" id="volUp">+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#ff5500;transform:;-ms-filter:"><path d="M16,21c3.527-1.547,5.999-4.909,5.999-9S19.527,4.547,16,3v2c2.387,1.386,3.999,4.047,3.999,7S18.387,17.614,16,19V21z"></path><path d="M16 7v10c1.225-1.1 2-3.229 2-5S17.225 8.1 16 7zM4 17h2.697L14 21.868V2.132L6.697 7H4C2.897 7 2 7.897 2 9v6C2 16.103 2.897 17 4 17z"></path></svg></span>
+            </div>
+
+            <div id="songDrop" class="-bottom-52  absolute rounded-t-2xl rounded-b-3xl bottom-0 w-60 right-2">
+                <span id="collapse" class="flex justify-center mt-1 itemes-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#ff5500;transform:;-ms-filter:"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10c5.514,0,10-4.486,10-10S17.514,2,12,2z M12,16.414l-5.707-5.707l1.414-1.414 L12,13.586l4.293-4.293l1.414,1.414L12,16.414z"></path></svg>
+                </span>
+                <div class="flex justify-between itemes-center p-2">
+                    <div class="flex">
+                        <img class="w-10 h-10 rounded-full" src="images/Attention.jpg" alt="">
+                        <span class="ml-2">
+                            <h1 class="text-sm font-semibold">Attention</h1>
+                            <p class="small text-sm font-semibold">Charlie Puth</p>
+                        </span>
+                    </div>
+                    <span class="my-auto " id="trianglePlay">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M7 6L7 18 17 12z"></path></svg>
+                    </span>
+                </div>
+
+                <div class="flex justify-between itemes-center p-2">
+                    <div class="flex">
+                        <img class="w-10 h-10 rounded-full" src="images/Cheap-Thrills.jpg" alt="">
+                        <span class="ml-2">
+                            <h1 class="text-sm font-semibold">Cheap-Thrills</h1>
+                            <p class="small text-sm font-semibold">Sia</p>
+                        </span>
+                    </div>
+                    <span class="my-auto " id="trianglePlayOne">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M7 6L7 18 17 12z"></path></svg>
+                    </span>
+                </div>
+
+                <div class="flex justify-between itemes-center p-2">
+                    <div class="flex">
+                        <img class="w-10 h-10 rounded-full" src="images/Company.png" alt="">
+                        <span class="ml-2">
+                            <h1 class="text-sm font-semibold">Company</h1>
+                            <p class="small text-sm font-semibold">Justin Bieber</p>
+                        </span>
+                    </div>
+                    <span class="my-auto " id="trianglePlayTwo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M7 6L7 18 17 12z"></path></svg>
+                    </span>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M8 7H11V17H8zM13 7H16V17H13z"></path></svg> -->
