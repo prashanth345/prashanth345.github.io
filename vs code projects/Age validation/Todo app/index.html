@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="flex flex-col items-center justify-center bg-gradient-to-r from-green-400 to-red-400">
+    <section class="p-10 bg-white rounded shadow-lg mt-28">
+        <section class="">
+            <h1 class="mb-10 text-2xl font-bold text-center text-indigo-500 ">Todo Task</h1>
+            <input class="p-2 border outline-none" id="input" type="text" placeholder="+ Add your New Task">
+            <button class="p-2 font-bold text-white bg-green-400 border-0 rounded-lg outline-none" id="btn">Add</button>
+        </section>
+
+        <section id="add-content" class="grid gap-5 mt-8">
+
+        </section>
+        <button id="clear-all" class="p-2 mt-5 font-bold text-center text-white bg-blue-500 border-0 rounded-md outline-none">Clear All</button>
+
+    </section>
+
+    <div id="alert-1" class="absolute hidden p-10 bg-pink-200 rounded-md shadow-lg top-44">
+        <h1 id="nothing">you must type something</h1>
+        <div class="mt-5 text-right">
+            <button onclick="collapseOk()" id="ok" class="px-3 py-1 border-2 border-green-400 rounded-md">OK</button>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div id="alert-2" class="absolute hidden p-10 bg-pink-200 rounded-md shadow-lg top-44">
+        <h1>Do you think all tasks should be cleared</h1>
+        <div class="mt-5 text-right">
+            <button onclick="collapseCancel()" id="cancel" class="px-3 py-1 border-2 border-green-400 rounded-md">Cancel</button>
+            <button onclick="collapseConfirm()" id="confirm" class="px-3 py-1 bg-green-400 border-2 border-green-400 rounded-md">Confirm</button>
+        </div>
+    </div>
+
+
+    <div id="alert-3" class="absolute hidden p-10 bg-pink-200 rounded-md shadow-lg top-44">
+        <h1 id="nothing">No task are there</h1>
+        <div class="mt-5 text-right">
+            <button onclick="collapseOk()" id="ok" class="px-3 py-1 border-2 border-green-400 rounded-md">OK</button>
+
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
